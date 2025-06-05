@@ -126,7 +126,7 @@ const loadPianoSamples = async () => {
 	const promises = Object.entries(audioFileMap).map(
 		async ([fullNoteId, fileName]) => {
 			try {
-				const response = await fetch(`/audio/${fileName}`);
+				const response = await fetch(fileName);
 				if (!response.ok) {
 					throw new Error(
 						`HTTP error! status: ${response.status} for ${fileName}`
