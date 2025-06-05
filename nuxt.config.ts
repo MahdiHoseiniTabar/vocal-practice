@@ -8,6 +8,6 @@ export default defineNuxtConfig({
 		preset: "static",
 	},
 	app: {
-		baseURL: "/signing-practice/", // important for GitHub Pages
+		baseURL: "/singing-practice/", // important for GitHub Pages
 	},
 });
