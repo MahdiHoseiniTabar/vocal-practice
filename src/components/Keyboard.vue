@@ -35,7 +35,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, defineEmits, nextTick } from "vue"; // Added defineEmits
-
+const base = useRuntimeConfig().app.baseURL;
 const emit = defineEmits(["notePlayed"]); // Declare the custom event
 
 // --- Musical Note Data (Diatonic Scale - White Keys Only) ---
@@ -65,7 +65,7 @@ const audioFileMap = {};
 octaves.forEach((octaveNum) => {
 	baseMusicalNotes.forEach((baseNote) => {
 		const fullNoteId = baseNote.name + octaveNum;
-		audioFileMap[fullNoteId] = `piano/${fullNoteId}.ogg`;
+		audioFileMap[fullNoteId] = `${base}audio/piano/${fullNoteId}.ogg`;
 	});
 });
 

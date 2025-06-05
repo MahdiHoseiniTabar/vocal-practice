@@ -8,6 +8,8 @@ export default defineNuxtConfig({
 		preset: "static",
 	},
 	app: {
-		baseURL: "/singing-practice/", // important for GitHub Pages
+		baseURL: "/vocal-practice/", // ✅ MUST match repo name
+		cdnURL: "/vocal-practice/", // ✅ MUST match repo name
+		buildAssetsDir: "_nuxt/", // ✅ no slash, no duplicate prefix
 	},
 });
