@@ -14,4 +14,5 @@ export default defineNuxtConfig({
 			publicDir: ".output/public",
 		},
 	},
+	ssr: false,
 });
