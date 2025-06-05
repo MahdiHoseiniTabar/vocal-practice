@@ -3,16 +3,11 @@ export default defineNuxtConfig({
 	compatibilityDate: "2025-05-15",
 	devtools: { enabled: true },
 	srcDir: "src/",
-	app: {
-		baseURL: "/singing-practice/",
-		buildAssetsDir: "/_nuxt/", // Ensures correct asset paths
-	},
-
-	// Nuxt 3 uses Nitro for output; this ensures static files go to .output/public
+	target: "static", // optional in Nuxt 3, but helps clarify intent
 	nitro: {
-		output: {
-			publicDir: ".output/public",
-		},
+		preset: "static",
 	},
-	ssr: false,
+	app: {
+		baseURL: "/signing-practice/", // important for GitHub Pages
+	},
 });
